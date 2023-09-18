@@ -412,6 +412,7 @@ static int csp_ifadd_udp_cmd(struct slash *slash) {
     udp_conf->host = strdup(server);
     udp_conf->lport = listen_port;
     udp_conf->rport = remote_port;
+    iface->name = strdup(name);
     csp_if_udp_init(iface, udp_conf);
 
     iface->is_default = dfl;
